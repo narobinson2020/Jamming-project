@@ -18,8 +18,10 @@ class Playlist extends React.Component {
         return(
             <div className="Playlist">
                 <input defaultValue= {"New Playlist"}
+                // the onNameChange attribute also showed an error in the console because it can't read the handleNameChange event handler
                 onNameChange= {this.handleNameChange}/>
-                <TrackList onRemove= {this.props.onRemove}
+                <TrackList tracks={this.props.playlistTracks} //you were missing this attribute and value the whole time >:(
+                onRemove= {this.props.onRemove}
                 isRemoval= {true}/>
                 <button className="Playlist-save" onClick= {this.props.onSave}>SAVE TO SPOTIFY</button>
             </div>
