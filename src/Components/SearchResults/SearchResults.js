@@ -7,6 +7,7 @@ class SearchResults extends React.Component {
         return(
             <div className="SearchResults">
                 <h2>Results</h2>
+                {/* this is supposed to pass the list of tracks that come from the SearchResults component */}
                 <TrackList tracks={this.props.SearchResults} 
                 onAdd={this.props.onAdd}
                 isRemoval={false}/>
