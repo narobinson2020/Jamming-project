@@ -8,6 +8,14 @@ class Track extends React.Component {
         this.removeTrack = this.removeTrack.bind(this);
     }
 
+    addTrack() {
+        this.props.onAdd(this.props.track);
+    }
+
+    removeTrack() {
+        this.props.onRemove(this.props.track); 
+    }
+
     renderAction() {
         if (this.props.isRemoval) {
             return <button className="Track-action"
@@ -16,14 +24,6 @@ class Track extends React.Component {
             return <button className="Track-action" 
             onClick={this.addTrack}>+</button>
         }
-    }
-
-    addTrack() {
-        this.props.onAdd(this.props.track);
-    }
-
-    removeTrack() {
-        this.props.removeTrack(this.props.track);
     }
 
     render() {
