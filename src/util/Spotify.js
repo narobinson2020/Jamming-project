@@ -1,8 +1,6 @@
 let accessToken;
-const clientId = 'f4b64568e3894cc391a4dc00fa137d65'; //when completely finished, make sure to commit this file WITHOUT the client ID
-const redirectURI = 'http://localhost:3002/'; 
-
-// const redirectURI = 'http://innocent-thrill.surge.sh'; 
+const clientId = ''; //get this from your spotify dev account 
+const redirectURI = ''; //this will be the localhost url 
 
 const Spotify = {
     getAccessToken() {
